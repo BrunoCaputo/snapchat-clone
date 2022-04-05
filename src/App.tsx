@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+import { db } from "./firebase";
 
 function App() {
   return (
