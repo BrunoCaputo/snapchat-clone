@@ -1,10 +1,17 @@
-import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.scss";
+import { WebcamCapture } from "./components/WebcamCapture";
 
 function App() {
   return (
     <div className="App">
-      <h1>Lets Build Snapchat</h1>
+      <Router>
+        <div className="App--body">
+          <Routes>
+            <Route path="/" element={<WebcamCapture />} />
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
