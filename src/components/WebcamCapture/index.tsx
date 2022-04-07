@@ -21,7 +21,7 @@ export function WebcamCapture() {
     const imageSrc = webcamRef.current?.getScreenshot();
     dispatch(setCameraImage(imageSrc));
     navigate("/preview");
-  }, [webcamRef]);
+  }, [webcamRef, dispatch, navigate]);
 
   return (
     <div className="webcamCapture">
