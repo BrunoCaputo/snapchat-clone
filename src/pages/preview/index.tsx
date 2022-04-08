@@ -41,7 +41,7 @@ export function Preview() {
     const storageRef = ref(storage, path);
     uploadString(storageRef, cameraImage, "data_url")
       .then(() => {
-        getDownloadURL(storageRef).then(async (url) => {
+        getDownloadURL(storageRef).then((url) => {
           const col = collection(db, "posts");
           addDoc(col, {
             image: url,

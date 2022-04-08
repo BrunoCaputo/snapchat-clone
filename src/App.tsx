@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.scss";
-import { Preview } from "./components/Preview";
-import { WebcamCapture } from "./components/WebcamCapture";
+import { Chats } from "./pages/chats";
+import { Preview } from "./pages/preview";
+import { WebcamCapture } from "./pages/webcamCapture";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Router>
         <div className="app--body">
           <Routes>
+            <Route path="/chats" element={<Chats />} />
             <Route path="/preview" element={<Preview />} />
             <Route path="/" element={<WebcamCapture />} />
           </Routes>
