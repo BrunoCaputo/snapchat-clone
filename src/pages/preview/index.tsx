@@ -44,7 +44,7 @@ export function Preview() {
         getDownloadURL(storageRef).then((url) => {
           const col = collection(db, "posts");
           addDoc(col, {
-            image: url,
+            imageUrl: url,
             username: "Bruno",
             read: false,
             // profilePic

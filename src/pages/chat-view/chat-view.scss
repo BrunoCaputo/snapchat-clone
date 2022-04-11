@@ -1,0 +1,19 @@
+.chatView {
+  position: relative;
+
+  > img {
+    cursor: pointer;
+  }
+  .chatView--timer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+
+    .chatView--timer--countdown {
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
