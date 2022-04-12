@@ -19,9 +19,11 @@ import { db, storage } from "../../firebase";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import "./preview.scss";
+import { selectUser } from "../../features/appSlice";
 
 export function Preview() {
   const cameraImage = useSelector(selectCameraImage);
+  const user = useSelector(selectUser);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -47,7 +49,7 @@ export function Preview() {
             imageUrl: url,
             username: "Bruno",
             read: false,
-            // profilePic
+            profilePic: user.profilePic,
             timestamp: serverTimestamp(),
           });
           navigate("/chats");
