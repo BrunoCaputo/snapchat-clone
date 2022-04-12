@@ -47,7 +47,7 @@ export function Preview() {
           const col = collection(db, "posts");
           addDoc(col, {
             imageUrl: url,
-            username: "Bruno",
+            username: user.username,
             read: false,
             profilePic: user.profilePic,
             timestamp: serverTimestamp(),
