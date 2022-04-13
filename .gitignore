@@ -34,7 +34,6 @@ sketch
 .env.production.local
 /build
 /dist
-/public
 
 # testing
 /coverage
